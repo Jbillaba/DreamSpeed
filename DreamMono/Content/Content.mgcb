@@ -1,7 +1,7 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/Debug/net8.0/Content
+/outputDir:bin/Debug/net8.0/Content/assets
 /intermediateDir:obj/$(Platform)
 /platform:DesktopGL
 /config:Debug

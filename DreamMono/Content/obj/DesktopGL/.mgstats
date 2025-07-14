@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png","/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/Content/bin/Debug/net8.0/Content/assets/player-table-16-16.xnb","TextureProcessor","Texture2DContent",395,4181,0.073143
+"/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png","/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/Content/bin/Debug/net8.0/Content/assets/assets/player-table-16-16.xnb","TextureProcessor","Texture2DContent",395,4181,0.073582
