@@ -6,12 +6,14 @@ namespace DreamMono;
 
 public class Game1 : Game
 {
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    private GraphicsDeviceManager graphics;
+    private SpriteBatch spriteBatch;
+
+    Texture2D playerTexture;
 
     public Game1()
     {
-        _graphics = new GraphicsDeviceManager(this);
+        graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
@@ -25,9 +27,10 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+        playerTexture = Content.Load<Texture2D>("player-table-16-16");
     }
 
     protected override void Update(GameTime gameTime)
@@ -45,7 +48,9 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
-
+        spriteBatch.Begin();
+        spriteBatch.Draw(playerTexture, new Vector2(0, 0), Color.White);
+        spriteBatch.End();
         base.Draw(gameTime);
     }
 }

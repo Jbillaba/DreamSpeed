@@ -1,10 +1,10 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/$(Platform)
+/outputDir:bin/Debug/net8.0/Content
 /intermediateDir:obj/$(Platform)
 /platform:DesktopGL
-/config:
+/config:Debug
 /profile:Reach
 /compress:False
 
@@ -12,4 +12,16 @@
 
 
 #---------------------------------- Content ---------------------------------#
+
+#begin assets/player-table-16-16.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:assets/player-table-16-16.png
 

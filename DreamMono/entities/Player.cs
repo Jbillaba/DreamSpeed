@@ -7,9 +7,4 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class Player
 {
-    public Vector2 Position
-    {
-        get => data.Position;
-        get => data.Position = value;
-    }
 }
