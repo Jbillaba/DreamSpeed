@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/ldtk/DreamSpeed.ldtk</SourceFile>
-  <SourceTime>2025-07-17T11:47:09.8459511-04:00</SourceTime>
+  <SourceTime>2025-07-17T14:19:04.2466461-04:00</SourceTime>
   <DestFile>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/ldtk/DreamSpeed.xnb</DestFile>
-  <DestTime>2025-07-17T13:57:19.0547778-04:00</DestTime>
+  <DestTime>2025-07-17T14:19:08.8547019-04:00</DestTime>
   <Importer>LDtkFileImporter</Importer>
   <ImporterTime>2025-06-09T15:53:54-04:00</ImporterTime>
   <Processor>LDtkFileProcessor</Processor>

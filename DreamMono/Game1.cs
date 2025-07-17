@@ -20,6 +20,7 @@ public class Game1 : Game
     LDtkWorld world;
     LDtkFile file;
     PlayerEntity player;
+    Camera camera;
 
     ExampleRenderer renderer;
 
@@ -56,6 +57,7 @@ public class Game1 : Game
         // TODO: Add your initialization logic here
         MonogameInitializer();
 
+        camera = new Camera(GraphicsDevice);
         renderer = new ExampleRenderer(spriteBatch, Content);
         file = LDtkFile.FromFile("ldtk/DreamSpeed", Content);
         world = file.LoadWorld(Worlds.World.Iid);
@@ -91,6 +93,9 @@ public class Game1 : Game
             }
         }
 
+        camera.Update();
+        camera.position = new Vector2(player.Position.X, player.Position.Y);
+        camera.zoom = pixelScale;
         player.Update(deltaTime, totalTime);
         base.Update(gameTime);
     }
@@ -100,7 +105,7 @@ public class Game1 : Game
         float totalTime = (float)gameTime.TotalGameTime.TotalSeconds;
         GraphicsDevice.Clear(file.BgColor);
 
-        spriteBatch.Begin(SpriteSortMode.Deferred, null, samplerState: SamplerState.PointClamp);
+        spriteBatch.Begin(SpriteSortMode.Deferred, null, samplerState: SamplerState.PointClamp, transformMatrix: camera.transform);
         {
             foreach (LDtkLevel level in world.Levels)
             {
