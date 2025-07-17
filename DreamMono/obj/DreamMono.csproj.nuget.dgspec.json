@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/DreamMono.csproj": {}
+    "/home/germburg/GameCode/DreamSpeed/DreamMono/DreamMono.csproj": {}
   },
   "projects": {
-    "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/DreamMono.csproj": {
+    "/home/germburg/GameCode/DreamSpeed/DreamMono/DreamMono.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/DreamMono.csproj",
+        "projectUniqueName": "/home/germburg/GameCode/DreamSpeed/DreamMono/DreamMono.csproj",
         "projectName": "DreamMono",
-        "projectPath": "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/DreamMono.csproj",
-        "packagesPath": "/Users/jeremyvillalva/.nuget/packages/",
-        "outputPath": "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/obj/",
+        "projectPath": "/home/germburg/GameCode/DreamSpeed/DreamMono/DreamMono.csproj",
+        "packagesPath": "/home/germburg/.nuget/packages/",
+        "outputPath": "/home/germburg/GameCode/DreamSpeed/DreamMono/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jeremyvillalva/.nuget/NuGet/NuGet.Config"
+          "/home/germburg/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,12 +32,21 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "LDtkMonogame": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
             "MonoGame.Content.Builder.Task": {
               "target": "Package",
               "version": "[3.8.4, )"
@@ -63,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/germburg/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

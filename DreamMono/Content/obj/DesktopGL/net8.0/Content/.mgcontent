@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config>Debug</Config>
   <SourceFiles>
-    <File>/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png</File>
+    <File>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

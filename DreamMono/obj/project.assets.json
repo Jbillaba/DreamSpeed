@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "LDtkMonogame/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MonoGame.Framework.DesktopGL": "3.8.4"
+        },
+        "compile": {
+          "lib/net8.0/LDtkMonogame.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LDtkMonogame.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MonoGame.Content.Builder.Task/3.8.4": {
         "type": "package",
         "build": {
@@ -130,6 +146,21 @@
     }
   },
   "libraries": {
+    "LDtkMonogame/1.8.0": {
+      "sha512": "pgn9+X11myyVYFfS2SLN8CcQEGPNJ7JICe90Ar9Wc3TqBc/uxO/s/tS79BxF4GhcT2r2d3NM3SklZ8zLKCFhzg==",
+      "type": "package",
+      "path": "ldtkmonogame/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "ldtkmonogame.1.8.0.nupkg.sha512",
+        "ldtkmonogame.nuspec",
+        "lib/net8.0/LDtkMonogame.dll",
+        "lib/net8.0/LDtkMonogame.xml",
+        "readme.md"
+      ]
+    },
     "MonoGame.Content.Builder.Task/3.8.4": {
       "sha512": "Oc/tp6liQ34BkBCrdQO23JDf1Z8r11kKeL9oXSlEfUiRSQYs7C0TYaKIjhfYGjSRaV7JaFIisLDToWpnf7ztKg==",
       "type": "package",
@@ -285,24 +316,25 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "LDtkMonogame >= 1.8.0",
       "MonoGame.Content.Builder.Task >= 3.8.4",
       "MonoGame.Framework.DesktopGL >= 3.8.4"
     ]
   },
   "packageFolders": {
-    "/Users/jeremyvillalva/.nuget/packages/": {}
+    "/home/germburg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/DreamMono.csproj",
+      "projectUniqueName": "/home/germburg/GameCode/DreamSpeed/DreamMono/DreamMono.csproj",
       "projectName": "DreamMono",
-      "projectPath": "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/DreamMono.csproj",
-      "packagesPath": "/Users/jeremyvillalva/.nuget/packages/",
-      "outputPath": "/Users/jeremyvillalva/gameCode/DreamSpeed/DreamMono/obj/",
+      "projectPath": "/home/germburg/GameCode/DreamSpeed/DreamMono/DreamMono.csproj",
+      "packagesPath": "/home/germburg/.nuget/packages/",
+      "outputPath": "/home/germburg/GameCode/DreamSpeed/DreamMono/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jeremyvillalva/.nuget/NuGet/NuGet.Config"
+        "/home/germburg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -320,12 +352,21 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "LDtkMonogame": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
             "version": "[3.8.4, )"
@@ -351,7 +392,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/germburg/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
