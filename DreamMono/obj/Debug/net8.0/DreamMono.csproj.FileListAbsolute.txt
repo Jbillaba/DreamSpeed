@@ -90,3 +90,5 @@
 /home/germburg/GameCode/DreamSpeed/DreamMono/obj/Debug/net8.0/DreamMono.genruntimeconfig.cache
 /home/germburg/GameCode/DreamSpeed/DreamMono/obj/Debug/net8.0/ref/DreamMono.dll
 /home/germburg/GameCode/DreamSpeed/DreamMono/bin/Debug/net8.0/LDtkMonogame.dll
+/home/germburg/GameCode/DreamSpeed/DreamMono/bin/Debug/net8.0/Content/data/tilesets/TX_Tileset_Grass.xnb
+/home/germburg/GameCode/DreamSpeed/DreamMono/bin/Debug/net8.0/Content/ldtk/DreamSpeed.xnb

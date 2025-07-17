@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png</SourceFile>
-  <SourceTime>2025-07-14T10:31:28.1285842-04:00</SourceTime>
-  <DestFile>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/assets/player-table-16-16.xnb</DestFile>
-  <DestTime>2025-07-17T13:57:18.8187748-04:00</DestTime>
+  <SourceFile>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/data/tilesets/TX_Tileset_Grass.png</SourceFile>
+  <SourceTime>2025-07-17T10:37:20.0211672-04:00</SourceTime>
+  <DestFile>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/Content/data/tilesets/TX_Tileset_Grass.xnb</DestFile>
+  <DestTime>2025-07-17T12:37:32.7900745-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-06-02T06:31:02-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -5,8 +5,12 @@
   <Config>Debug</Config>
   <SourceFiles>
     <File>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png</File>
+    <File>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/data/tilesets/TX_Tileset_Grass.png</File>
+    <File>/home/germburg/GameCode/DreamSpeed/DreamMono/Content/ldtk/DreamSpeed.ldtk</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

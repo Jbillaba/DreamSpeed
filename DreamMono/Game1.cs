@@ -2,14 +2,32 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using LDtk;
+using LDtk.Renderer;
+using DreamMono.entities;
+using System;
+using LDtkTypes;
+using System.Runtime.CompilerServices;
+
+
 namespace DreamMono;
 
 public class Game1 : Game
 {
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
+    Texture2D spriteSheet;
+    LDtkWorld world;
+    LDtkFile file;
+    PlayerEntity player;
 
-    Texture2D playerTexture;
+    ExampleRenderer renderer;
+
+    float deltaTime, totalTime;
+
+    float pixelScale = 1f;
+
+    public static  Texture2D pixel{ get; set;}
 
     public Game1()
     {
@@ -18,39 +36,80 @@ public class Game1 : Game
         IsMouseVisible = true;
     }
 
+    public void MonogameInitializer()
+    {
+        Window.Title = "DreamSpeed protoype";
+        spriteBatch = new SpriteBatch(GraphicsDevice);
+        graphics.PreferredBackBufferHeight = Globals.HEIGHT;
+        graphics.PreferredBackBufferWidth = Globals.WIDTH;
+        graphics.ApplyChanges();
+
+        Window.ClientSizeChanged += (o, e) => pixelScale = Math.Max(GraphicsDevice.Viewport.Height / 180, 1);
+
+        pixelScale = Math.Max(GraphicsDevice.Viewport.Height / 186, 0);
+
+        pixel = new Texture2D(GraphicsDevice, 1, 1);
+        pixel.SetData(new byte[] { 0xFF, 0xFF, 0xFF, 0xFF });
+    }
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        MonogameInitializer();
 
-        base.Initialize();
+        renderer = new ExampleRenderer(spriteBatch, Content);
+        file = LDtkFile.FromFile("ldtk/DreamSpeed", Content);
+        world = file.LoadWorld(Worlds.World.Iid);
+        spriteSheet = Content.Load<Texture2D>("assets/player-table-16-16");
+
+        foreach (LDtkLevel level in world.Levels)
+        {
+            renderer.PrerenderLevel(level);
+        }
+
+        Player playerData = world.GetEntity<Player>();
+        player = new PlayerEntity(renderer, playerData ,spriteSheet);
+
+        base.Initialize(); 
+
     }
 
-    protected override void LoadContent()
-    {
-        spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        // TODO: use this.Content to load your game content here
-        playerTexture = Content.Load<Texture2D>("assets/player-table-16-16");
-    }
 
     protected override void Update(GameTime gameTime)
     {
+
+        deltaTime = totalTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-        // TODO: Add your update logic here
+        foreach (LDtkLevel level in world.Levels)
+        {
+            if (level.Contains(player.Position))
+            {
+                player.Level = level;
+                break;
+            }
+        }
 
+        player.Update(deltaTime, totalTime);
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        float totalTime = (float)gameTime.TotalGameTime.TotalSeconds;
+        GraphicsDevice.Clear(file.BgColor);
 
-        // TODO: Add your drawing code here
-        spriteBatch.Begin();
-        spriteBatch.Draw(playerTexture, new Vector2(0, 0), Color.White);
+        spriteBatch.Begin(SpriteSortMode.Deferred, null, samplerState: SamplerState.PointClamp);
+        {
+            foreach (LDtkLevel level in world.Levels)
+            {
+                renderer.PrerenderLevel(level);
+            }
+            player.Draw(totalTime);
+        }
         spriteBatch.End();
+
         base.Draw(gameTime);
     }
 }

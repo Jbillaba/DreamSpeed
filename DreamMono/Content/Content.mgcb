@@ -1,7 +1,7 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/Debug/net8.0/Content/assets
+/outputDir:bin/$(Platform)
 /intermediateDir:obj/$(Platform)
 /platform:DesktopGL
 /config:Debug
@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:/home/germburg/.nuget/packages/ldtkmonogame.contentpipeline/1.8.0/lib/net8.0/LDtk.ContentPipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -24,4 +25,21 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:assets/player-table-16-16.png
+
+#begin data/tilesets/TX_Tileset_Grass.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:data/tilesets/TX_Tileset_Grass.png
+
+#begin ldtk/DreamSpeed.ldtk
+/importer:LDtkFileImporter
+/processor:LDtkFileProcessor
+/build:ldtk/DreamSpeed.ldtk
 
