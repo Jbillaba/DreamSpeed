@@ -14,6 +14,13 @@ public partial class Player : ILDtkEntity
         Uid = 4,
         Size = new Vector2(16f, 16f),
         Pivot = new Vector2(0f, 0f),
+        Tile = new TilesetRectangle()
+        {
+            X = 0,
+            Y = 0,
+            W = 16,
+            H = 16
+        },
         SmartColor = new Color(190, 74, 47, 255),
     };
 
