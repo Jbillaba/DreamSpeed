@@ -7,8 +7,6 @@ using LDtk.Renderer;
 using DreamMono.entities;
 using System;
 using LDtkTypes;
-using System.Runtime.CompilerServices;
-
 
 namespace DreamMono;
 
@@ -21,7 +19,6 @@ public class Game1 : Game
     LDtkFile file;
     PlayerEntity player;
     Camera camera;
-
     ExampleRenderer renderer;
 
     float deltaTime, totalTime;
@@ -84,6 +81,10 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+        camera.Update();
+        camera.position = new Vector2(player.Position.X, player.Position.Y);
+        camera.zoom = pixelScale;
+
         foreach (LDtkLevel level in world.Levels)
         {
             if (level.Contains(player.Position))
@@ -93,9 +94,7 @@ public class Game1 : Game
             }
         }
 
-        camera.Update();
-        camera.position = new Vector2(player.Position.X, player.Position.Y);
-        camera.zoom = pixelScale;
+        
         player.Update(deltaTime, totalTime);
         base.Update(gameTime);
     }
@@ -109,7 +108,7 @@ public class Game1 : Game
         {
             foreach (LDtkLevel level in world.Levels)
             {
-                renderer.PrerenderLevel(level);
+                renderer.RenderPrerenderedLevel(level);
             }
             player.Draw(totalTime);
         }

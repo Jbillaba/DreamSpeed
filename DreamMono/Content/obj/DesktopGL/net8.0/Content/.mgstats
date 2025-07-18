@@ -1,4 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "/home/germburg/GameCode/DreamSpeed/DreamMono/Content/assets/player-table-16-16.png","/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/Content/assets/player-table-16-16.xnb","TextureProcessor","Texture2DContent",395,4181,0.147287
 "/home/germburg/GameCode/DreamSpeed/DreamMono/Content/data/tilesets/TX_Tileset_Grass.png","/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/Content/data/tilesets/TX_Tileset_Grass.xnb","TextureProcessor","Texture2DContent",11016,262229,0.2321467
-"/home/germburg/GameCode/DreamSpeed/DreamMono/Content/ldtk/DreamSpeed.ldtk","/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/Content/ldtk/DreamSpeed.xnb","LDtkFileProcessor","LDtkFile",30308,16384,0.2214166
+"/home/germburg/GameCode/DreamSpeed/DreamMono/Content/ldtk/DreamSpeed.ldtk","/home/germburg/GameCode/DreamSpeed/DreamMono/Content/bin/DesktopGL/Content/ldtk/DreamSpeed.xnb","LDtkFileProcessor","LDtkFile",193705,115340,0.2416493

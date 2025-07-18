@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DreamMono")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b526bb7d273fdb651fb1c12e17a97ed5a42d4da6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3b90e4d21d0e0fc0368192b5b0630d6187cfc2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("DreamMono")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DreamMono")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
